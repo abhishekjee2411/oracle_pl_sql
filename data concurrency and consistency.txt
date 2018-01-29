@@ -1,0 +1,46 @@
+================================
+DATA CONCURRENCY AND CONSISTENCY
+================================
+
+data concurrency
+data consistency
+
+transaction isolation levels
+database locking mechanism
+automatic locks
+manual data locks
+user-defined locks
+
+A multiuser database must provide the following:
+
+data concurrency
+	the assurance that users can access data at the same time.
+data consistency
+	the assurance that each user sees a consistent view of the data, including visible changes made by the user's own transactions and committed transactions of other users.
+	
+serializability: it is a transaction isolation model.
+a serializable transaction operates in an environment that makes it appear as if no other users were modifying data in the database.
+
+multiversion consistency model
+locks
+transactions
+
+different versions of a data block can exist simultaneously.
+.: transactions can read the version of data committed atthe point in time required by a query and return results that are consistent to a single point in time.
+
+==============================
+MULTIVERSION CONSISTENCY MODEL
+==============================
+
+multiversioning
+	simultaneously materializing multiple version of data.
+	
+read-consistent queries
+	the data returned by a query is committed and consistent for a single point in time.
+	Oracle never permits "dirty reads"......i.e., it never allows a transaction to read uncommitted data in another transaction.
+non-blocking queries
+	readers and writers of data do not block one another.
+	
+The point in time is determined by the SCN (System Change Number).
+If a query is fired at a particular SCN, then the result of that query will be consistent to the point in time corresponding to that SCN.
+

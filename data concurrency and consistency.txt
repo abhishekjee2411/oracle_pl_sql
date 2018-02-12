@@ -1,3 +1,5 @@
+https://docs.oracle.com/database/121/CNCPT/consist.htm#CNCPT221
+
 ================================
 DATA CONCURRENCY AND CONSISTENCY
 ================================
@@ -26,7 +28,7 @@ locks
 transactions
 
 different versions of a data block can exist simultaneously.
-.: transactions can read the version of data committed atthe point in time required by a query and return results that are consistent to a single point in time.
+.: transactions can read the version of data committed at the point in time required by a query and return results that are consistent to a single point in time.
 
 ==============================
 MULTIVERSION CONSISTENCY MODEL
@@ -44,3 +46,10 @@ non-blocking queries
 The point in time is determined by the SCN (System Change Number).
 If a query is fired at a particular SCN, then the result of that query will be consistent to the point in time corresponding to that SCN.
 
+Transaction-Level Read Consistency
+	Each statement in a transaction sees data from the same point in time, which is the time at which the transaction began.
+	Within a transaction, a query can never be exposed to phantom reads.
+	
+Read Consistency and Undo Segments
+	Oracle achieves read consistency through undo data.
+	

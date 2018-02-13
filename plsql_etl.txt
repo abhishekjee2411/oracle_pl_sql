@@ -1,0 +1,19 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://it.toolbox.com/question/pl-sql-vs-informatica-why-go-for-a-etl-tool-062212
+
+Informatica
+Ab-Initio
+PL/SQL
+OWB
+MS-SSIS
+
+Servers used:
+	DB Server
+	BI Server
+	Dedicated ETL Server
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+http://etl-tools.info/en/oracle/oracle_plsql-etl.htm
+
